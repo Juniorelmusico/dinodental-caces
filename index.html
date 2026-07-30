@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="theme-color" content="#5b9bd5" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>DinoDental CACES - Preparación Odontología</title>
+  <meta name="description" content="Preparación divertida para el examen CACES de Odontología con resúmenes, cuestionarios y un chatbot dinosaurio motivacional." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%95%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Fondo decorativo -->
+  <div class="bg-decor">
+    <span class="deco leaf leaf-1">🌿</span>
+    <span class="deco leaf leaf-2">🌴</span>
+    <span class="deco leaf leaf-3">🌱</span>
+    <span class="deco leaf leaf-4">🍃</span>
+    <span class="deco egg egg-1">🥚</span>
+    <span class="deco egg egg-2">🥚</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-emoji">🦕</span>
+      <div class="logo-text">
+        <h1>DinoDental</h1>
+        <p>Preparación CACES · Odontología</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <button class="nav-btn active" data-section="home">🏠 Inicio</button>
+      <button class="nav-btn" data-section="componentes">📚 Componentes</button>
+      <button class="nav-btn" data-section="quiz">🧪 Cuestionarios</button>
+      <button class="nav-btn" data-section="simulacro">🎯 Simulacro CACES</button>
+      <button class="nav-btn" data-section="progreso">📊 Progreso</button>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- SECCIÓN INICIO -->
+    <section id="home" class="section active">
+      <div class="tarjeta-junior">
+        <span class="corazon">💙</span>
+        <div>
+          <strong>Para ti, mi futura doctora.</strong>
+          <p>Hecho con muchísimo amor por tu novio <strong>Junior</strong>. Sé que vas a aprobar el CACES porque eres brillante. Yo estaré aquí a cada paso 💙</p>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="hero-text">
+          <h2>¡Hola, futura doctora! <span class="wave">👋</span></h2>
+          <p class="hero-subtitle">Bienvenida a tu app de estudio con temática de dinosaurios 🦖</p>
+          <p class="hero-desc">
+            Preparé este espacio para que estudies para el <strong>CACES de Odontología</strong> de manera
+            divertida, organizada y sin estrés. Rex está aquí para ayudarte 💙
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="showSection('componentes')">📚 Empezar a estudiar</button>
+            <button class="btn btn-secondary" onclick="showSection('simulacro')">🎯 Simulacro CACES</button>
+          </div>
+        </div>
+        <div class="hero-dino">
+          <!-- Dinosaurio SVG cute (azul) -->
+          <svg viewBox="0 0 300 300" class="dino-svg" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cuerpo -->
+            <ellipse cx="150" cy="180" rx="90" ry="70" fill="#5b9bd5"/>
+            <!-- Panza clara -->
+            <ellipse cx="150" cy="200" rx="55" ry="45" fill="#d6e9f8"/>
+            <!-- Cabeza -->
+            <circle cx="200" cy="120" r="55" fill="#5b9bd5"/>
+            <!-- Ojo -->
+            <circle cx="215" cy="110" r="12" fill="white"/>
+            <circle cx="218" cy="112" r="6" fill="#1e3a5f"/>
+            <circle cx="220" cy="110" r="2" fill="white"/>
+            <!-- Cachetes rosados -->
+            <circle cx="235" cy="135" r="7" fill="#ffb3c6" opacity="0.7"/>
+            <circle cx="180" cy="135" r="6" fill="#ffb3c6" opacity="0.5"/>
+            <!-- Boca sonriente -->
+            <path d="M 200 140 Q 215 150 230 140" stroke="#1e3a5f" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Púas espalda -->
+            <polygon points="90,130 80,105 100,115" fill="#ffd166"/>
+            <polygon points="110,115 105,90 125,102" fill="#ffd166"/>
+            <polygon points="135,102 135,80 155,95" fill="#ffd166"/>
+            <polygon points="160,95 165,72 180,90" fill="#ffd166"/>
+            <!-- Patas -->
+            <ellipse cx="105" cy="240" rx="22" ry="18" fill="#4a90e2"/>
+            <ellipse cx="175" cy="240" rx="22" ry="18" fill="#4a90e2"/>
+            <!-- Cola -->
+            <path d="M 65 180 Q 30 170 20 200 Q 40 195 65 200 Z" fill="#5b9bd5"/>
+            <!-- Corazón pequeño -->
+            <path d="M 240 165 C 240 160, 245 160, 245 165 C 245 160, 250 160, 250 165 C 250 170, 245 175, 245 175 C 245 175, 240 170, 240 165 Z" fill="#ffb3c6"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-emoji">📖</div>
+          <div class="stat-num">9</div>
+          <div class="stat-label">Componentes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-emoji">📝</div>
+          <div class="stat-num">44</div>
+          <div class="stat-label">Subcomponentes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-emoji">🧪</div>
+          <div class="stat-num">143</div>
+          <div class="stat-label">Temas oficiales</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-emoji">💪</div>
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Amor y ánimo</div>
+        </div>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote">"El único modo de hacer un gran trabajo es amar lo que haces. Y tú vas a ser una odontóloga increíble." 🦕💙</p>
+        <p class="quote-firma">— Con amor, Junior 💙</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN COMPONENTES -->
+    <section id="componentes" class="section">
+      <h2 class="section-title">📚 Componentes del examen</h2>
+      <p class="section-desc">Cada componente tiene un peso distinto en el examen. Empieza por los de mayor ponderación 🎯</p>
+      <div id="componentes-grid" class="componentes-grid"></div>
+    </section>
+
+    <!-- SECCIÓN DETALLE DE COMPONENTE -->
+    <section id="componente-detalle" class="section">
+      <button class="btn-back" onclick="showSection('componentes')">← Volver a componentes</button>
+      <div id="componente-detalle-content"></div>
+    </section>
+
+    <!-- SECCIÓN QUIZ (LISTA) -->
+    <section id="quiz" class="section">
+      <h2 class="section-title">🧪 Elige un cuestionario</h2>
+      <p class="section-desc">Cada cuestionario tiene preguntas al estilo CACES. ¡Practica todas las veces que quieras!</p>
+      <div id="quiz-grid" class="componentes-grid"></div>
+    </section>
+
+    <!-- SECCIÓN QUIZ ACTIVO -->
+    <section id="quiz-activo" class="section">
+      <button class="btn-back" onclick="showSection('quiz')">← Salir del cuestionario</button>
+      <div id="quiz-activo-content"></div>
+    </section>
+
+    <!-- SECCIÓN SIMULACRO CACES -->
+    <section id="simulacro" class="section">
+      <h2 class="section-title">🎯 Posibles preguntas del CACES</h2>
+      <p class="section-desc">
+        Preguntas al estilo del examen real (casos clínicos con paciente, síntomas, hallazgos radiográficos).
+        El examen oficial tiene 100 preguntas y necesitas 65% para aprobar 💪
+      </p>
+      <div class="simulacro-opciones">
+        <div class="sim-card">
+          <div class="sim-icono">📝</div>
+          <h3>Simulacro corto</h3>
+          <p>20 preguntas mezcladas de todos los componentes. Ideal para calentar.</p>
+          <button class="btn btn-primary" onclick="iniciarSimulacro(20)">Empezar 20 preguntas</button>
+        </div>
+        <div class="sim-card">
+          <div class="sim-icono">📋</div>
+          <h3>Simulacro medio</h3>
+          <p>50 preguntas al estilo CACES. Un buen entrenamiento.</p>
+          <button class="btn btn-primary" onclick="iniciarSimulacro(50)">Empezar 50 preguntas</button>
+        </div>
+        <div class="sim-card sim-card-destacado">
+          <div class="sim-icono">🏆</div>
+          <h3>Simulacro CACES completo</h3>
+          <p>100 preguntas como en el examen real. ¡El desafío final!</p>
+          <button class="btn btn-secondary" onclick="iniciarSimulacro(100)">Empezar simulacro completo</button>
+        </div>
+      </div>
+      <div class="simulacro-info">
+        <h3>💡 Formato del examen CACES Odontología</h3>
+        <ul>
+          <li><strong>100 preguntas</strong> seleccionadas aleatoriamente de un banco oficial de ~1500.</li>
+          <li><strong>Tiempo:</strong> 2 horas 40 minutos.</li>
+          <li><strong>Nota mínima:</strong> 65% de respuestas correctas.</li>
+          <li>Predominan <strong>casos clínicos</strong> con edad del paciente, síntomas, hallazgos y radiografías.</li>
+          <li>Solo <strong>una respuesta correcta</strong> por pregunta.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECCIÓN RESULTADOS -->
+    <section id="resultados" class="section">
+      <div id="resultados-content"></div>
+    </section>
+
+    <!-- SECCIÓN PROGRESO -->
+    <section id="progreso" class="section">
+      <h2 class="section-title">📊 Tu progreso</h2>
+      <p class="section-desc">Un vistazo a cómo vas con tu preparación 🦖</p>
+      <div id="progreso-content"></div>
+    </section>
+
+  </main>
+
+  <!-- CHATBOT FLOTANTE -->
+  <button id="chat-toggle" class="chat-toggle" aria-label="Abrir chat">
+    <span class="chat-toggle-emoji">🦕</span>
+    <span class="chat-toggle-badge">Rex</span>
+  </button>
+
+  <div id="chat-window" class="chat-window">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <span class="chat-avatar">🦕</span>
+        <div>
+          <strong>Rex</strong>
+          <small>Tu asistente dinosaurio 💚</small>
+        </div>
+      </div>
+      <button id="chat-close" aria-label="Cerrar chat">✕</button>
+    </div>
+    <div id="chat-messages" class="chat-messages"></div>
+    <div class="chat-quick">
+      <button class="chip" data-msg="motivación">💪 Motivación</button>
+      <button class="chip" data-msg="tip">💡 Tip de estudio</button>
+      <button class="chip" data-msg="respirar">🌸 Respirar</button>
+      <button class="chip" data-msg="temas">📚 ¿Qué estudio?</button>
+    </div>
+    <form id="chat-form" class="chat-form">
+      <input id="chat-input" type="text" placeholder="Escribe algo a Rex..." autocomplete="off"/>
+      <button type="submit" aria-label="Enviar">➤</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>Hecho con 💙 por <strong>Junior</strong> para ti · DinoDental CACES 🦕</p>
+    <p style="font-size:0.8rem; margin-top:0.3rem; opacity:0.7">Vas a lograr todo lo que te propongas, amor.</p>
+  </footer>
+
+  <script src="data/summaries.js"></script>
+  <script src="data/questions.js"></script>
+  <script src="data/simulacro.js"></script>
+  <script src="data/chatbot.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
